@@ -3,24 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Antonio_s.s_ - Link in Bio</title>
+  <title>@Antonio_s.s_ - Link in Bio</title>
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     body {
       font-family: 'Arial', sans-serif;
-      background: linear-gradient(-45deg, #1e1e2f, #3b3b5c, #5a3c8c, #1e1e2f);
-      background-size: 400% 400%;
+      background: linear-gradient(-45deg, #000000, #0d0d0d, #1f1f1f, #3a3a3a, #000000, #1a1a40, #2c003e);
+      background-size: 600% 600%;
       animation: gradientBG 12s ease infinite;
       color: white;
       text-align: center;
-      padding: 30px;
+      padding: 25px;
     }
+
     @keyframes gradientBG {
       0% { background-position: 0% 50%; }
+      25% { background-position: 50% 100%; }
       50% { background-position: 100% 50%; }
+      75% { background-position: 50% 0%; }
       100% { background-position: 0% 50%; }
     }
+
     .profile-pic {
       width: 130px;
       height: 130px;
@@ -28,24 +32,37 @@
       margin-bottom: 15px;
       border: 4px solid #fff;
       object-fit: cover;
-      box-shadow: 0 0 20px rgba(255,255,255,0.6);
+      box-shadow: 0 0 25px rgba(255,255,255,0.6);
       animation: glow 4s ease-in-out infinite alternate;
     }
+
     @keyframes glow {
-      from { box-shadow: 0 0 10px #fff; }
-      to { box-shadow: 0 0 25px #ff4081; }
+      from { box-shadow: 0 0 15px #fff; }
+      to { box-shadow: 0 0 35px #ff4081; }
     }
+
     h1 {
       font-size: 28px;
-      margin-bottom: 25px;
+      margin-bottom: 8px;
       text-shadow: 0 0 10px rgba(255,255,255,0.5);
     }
+
+    .description {
+      font-size: 15px;
+      margin-bottom: 25px;
+      opacity: 0.9;
+      font-style: italic;
+    }
+
+    /* Bloques de enlaces */
     .links {
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 18px;
+      margin-top: 15px;
     }
+
     .links a {
       display: flex;
       align-items: center;
@@ -54,6 +71,8 @@
       padding: 14px;
       width: 90%;
       max-width: 320px;
+      background: rgba(255,255,255,0.08);
+      border: 2px solid rgba(255,255,255,0.15);
       color: white;
       text-decoration: none;
       border-radius: 30px;
@@ -62,35 +81,62 @@
       box-shadow: 0 5px 15px rgba(0,0,0,0.4);
       transition: transform 0.25s, box-shadow 0.25s;
     }
+
     .links a:hover {
       transform: scale(1.07);
       box-shadow: 0 0 25px rgba(255,255,255,0.7);
     }
-    /* Colores oficiales */
-    .youtube { background: #FF0000; }
-    .facebook { background: #1877F2; }
-    .instagram { background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5); }
-    .tiktok { background: #000000; }
-    .threads { background: #000000; }
-    .links i {
-      font-size: 20px;
+
+    /* Colores solo en iconos */
+    .links i { font-size: 22px; }
+    .youtube i { color: #FF0000; }
+    .facebook i { color: #1877F2; }
+    .instagram i { 
+      background: radial-gradient(circle at 30% 30%, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
+    .tiktok i { color: #00f2ea; text-shadow: 1px 1px 0 #ff0050; }
+    .threads i { color: #ffffff; }
+
+    /* Íconos en fila */
+    .icons-row {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 22px;
+    }
+
+    .icons-row a {
+      font-size: 28px;
+      color: white;
+      transition: transform 0.3s;
+    }
+    .icons-row a:hover {
+      transform: scale(1.2);
+    }
+
     footer {
       margin-top: 35px;
       font-size: 12px;
       opacity: 0.7;
     }
+
     /* Responsivo */
     @media (max-width: 600px) {
       h1 { font-size: 22px; }
+      .description { font-size: 13px; }
       .links a { font-size: 14px; padding: 12px; }
+      .icons-row a { font-size: 24px; }
     }
   </style>
 </head>
 <body>
   <img src="marco.jpeg" alt="Foto de perfil" class="profile-pic">
-  <h1>Antonio_s.s_</h1>
+  <h1>@Antonio_s.s_</h1>
+  <p class="description">Artista y productor musical 🎵🔥</p>
 
+  <!-- Links en filas -->
   <div class="links">
     <a href="https://www.youtube.com/@antonios.smusic" target="_blank" class="youtube"><i class="fab fa-youtube"></i> YouTube</a>
     <a href="https://www.facebook.com/share/1CPktXvVtf/" target="_blank" class="facebook"><i class="fab fa-facebook"></i> Facebook</a>
@@ -99,8 +145,17 @@
     <a href="https://www.threads.net" target="_blank" class="threads"><i class="fa-brands fa-threads"></i> Threads</a>
   </div>
 
+  <!-- Íconos en fila -->
+  <div class="icons-row">
+    <a href="https://www.youtube.com/@antonios.smusic" target="_blank" class="youtube"><i class="fab fa-youtube"></i></a>
+    <a href="https://www.facebook.com/share/1CPktXvVtf/" target="_blank" class="facebook"><i class="fab fa-facebook"></i></a>
+    <a href="https://www.instagram.com/antonio_s.s_?igsh=ZHBzem9nbzBrcnc4" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.tiktok.com/@antonio_s.s_?_t=ZS-8zD8Qonpz9k&_r=1" target="_blank" class="tiktok"><i class="fab fa-tiktok"></i></a>
+    <a href="https://www.threads.net" target="_blank" class="threads"><i class="fa-brands fa-threads"></i></a>
+  </div>
+
   <footer>
-    © 2025 Antonio_s.s_ | Todos los derechos reservados
+    © 2025 @Antonio_s.s_ | Todos los derechos reservados
   </footer>
 </body>
 </html>
